@@ -1,0 +1,1 @@
+Live Crypto Prices Mobile Application: a real-time data-exchange mobile application using React Native and Socket.io that works in both iOS and Android environments to display live prices of cryptocurrencies.
