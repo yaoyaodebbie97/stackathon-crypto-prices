@@ -10,18 +10,7 @@ app.use(express.json()) // middlware
 const server = app.listen(PORT, () => {
     console.log(`Listening to port ${PORT}`);
 })
-const io = socketIO(server); // or call it socketHandler
-
-// io.on('connection', () =>{
-//     console.log('Client Connected');
-
-//     setInterval(() =>{
-//         io.emit('crypto', 'Hello Client')
-//     }, 1000)
-//     // after connection, emiting a message 
-//     //       pass in event (so that front end can listen to)+ content of message 
-//     // every 5 seconds fetch data from server and then send to client 
-// })
+const io = socketIO(server); 
 
 io.on('connection', (socket) => {
     socket.on('disconnect', () =>{
